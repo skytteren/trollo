@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trollo</title>
+    <link rel="stylesheet" type="text/css" href="css/trollo.css"/>
+  </head>
+  <body>
+
+
+    <header>
+        <div id="loggedin">
+            Logged in to as <span id="fullName"></span>
+            <a id="disconnect" href="#">Log Out</a>
+            <br/>
+            <form method="GET" id="orgForm">
+                <label>Organization<select value="" name="org" onchange="javascript:submit();"></select></label>
+            </form>
+            <br/>
+            <a href="javascript:document.getElementById('output').classList.toggle('hideMacro');">Toggle only macro</a>
+        </div>
+
+        <h1>Trollo</h1>
+
+        <div id="loggedout">
+            <a id="connectLink" href="#">Connect Trollo to Trello</a>
+        </div>
+    </header>
+    <div id="output" class="hideMacro">
+        <div id="memberLinks"></div>
+        <section id="members">
+        </section>
+    </div>
+    <footer></footer>
+    <script src="js/lodash.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://api.trello.com/1/client.js?key=ca12dbf076559bf2a47e2e37ed331802"></script>
+    <script src="js/trollo.js"></script>
+  </body>
+</html>

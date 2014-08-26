@@ -1,0 +1,136 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #111;
+}
+
+h1{
+    margin: 4px 0 4px 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#loggedout {
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+
+}
+#loggedin {
+    display: none;
+    float: right;
+    margin: 4px 15px 4px 0;
+}
+
+#memberLinks{
+    margin-left: 15px;
+}
+
+#members{
+    margin-bottom: 20px;
+}
+.member > div{
+    margin: 2px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    min-height: 200px;
+}
+.member > div:empty{
+    min-height: 0;
+}
+.member > h2{
+    margin: 2px 0 0 15px;
+}
+
+.member > span{
+    margin: 2px 0 0 15px;
+}
+
+.member a{
+    text-decoration: none;
+    color: #333;
+}
+
+.card{
+    vertical-align: top;
+    white-space: normal;
+    display: inline-block;
+    width: 200px;
+    background-color: #F6F6F6;
+    font-size: 12px;
+    padding: 2px;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.hideMacro .card{
+    display: none;
+}
+
+.card.macro{
+    display: inline-block;
+}
+
+.card:first-of-type{
+    border-left: 10px solid greenyellow;
+}
+
+.hideMacro .macro:first-of-type{
+    border-left: 10px solid red;
+}
+
+.hideMacro .macro:last-of-type{
+    border-right: 10px solid purple;
+}
+
+.card:last-of-type{
+    border-right: 10px solid blue;
+}
+
+.card p{
+    max-width: 200px;
+    overflow-x: hidden;
+}
+
+.card h3{
+    font-size: 12px;
+    margin: 0;
+}
+
+.card .date{
+    margin: 2px 0;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.card .boardLink{
+    white-space: nowrap;
+    width: 200px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.allcards{
+    cursor: pointer;
+    display: none;
+}
+
+span.member-avatar {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 30px;
+    font-size: 16px;
+    height: 30px;
+    color: #FFF;
+    background-color: #111;
+}
+
+span.member-avatar span {
+    line-height: 190%;
+}
