@@ -1,4 +1,7 @@
 
+function scrollInto(id){
+    document.getElementById(id).parentNode.scrollIntoView();
+}
 
 var onAuthorize = function() {
     updateLoggedIn();
@@ -64,11 +67,11 @@ var onAuthorize = function() {
         function renderMemberLink(member){
             var id = member.id;
             if(member.avatarHash){
-                return '<a href="javascript:trollo.scrollInto(\'' + id + '\')"><img class="member-avatar" height="30" width="30" ' +
+                return '<a href="javascript:scrollInto(\'' + id + '\')"><img class="member-avatar" height="30" width="30" ' +
                     'src="https://trello-avatars.s3.amazonaws.com/' + member.avatarHash +'/30.png" ' +
                     'alt="' + member.fullName + '" title="' + member.fullName + '" /></a> ';
             } else {
-                return ' <a href="javascript:trollo.scrollInto(\'' + id + '\')"><span class="member-avatar" title="' + member.fullName + '"><span>' + member.initials + '</span></span></a> ';
+                return ' <a href="javascript:scrollInto(\'' + id + '\')"><span class="member-avatar" title="' + member.fullName + '"><span>' + member.initials + '</span></span></a> ';
             }
         }
 
@@ -129,15 +132,7 @@ var onAuthorize = function() {
         }
 
         // /1/boards/[board_id]/cards
-        return {
-            "scrollInto": function scrollInto(id){
-                document.getElementById(id).parentNode.scrollIntoView();
-            }
-        };
-
-    });
-
-    window.trollo = window.trollo();
+    })();
 };
 
 var updateLoggedIn = function() {
@@ -169,5 +164,6 @@ $("#connectLink")
 $("#disconnect").click(logout);
 
 
+document.addEventListener('touchmove',function(e) {e.preventDefault();},false);
 
 

@@ -75,21 +75,26 @@ a {
     display: inline-block;
 }
 
-.card:first-of-type{
-    border-left: 10px solid greenyellow;
+.member > div {
+    background-color: red;
+    padding: 0 10px;
 }
 
-.hideMacro .macro:first-of-type{
-    border-left: 10px solid red;
-}
+/*.card:first-of-type{*/
+    /*border-left: 10px solid greenyellow;*/
+/*}*/
 
-.hideMacro .macro:last-of-type{
-    border-right: 10px solid purple;
-}
+/*.hideMacro .macro:first-of-type{*/
+    /*border-left: 10px solid red;*/
+/*}*/
 
-.card:last-of-type{
-    border-right: 10px solid blue;
-}
+/*.hideMacro .macro:last-of-type{*/
+    /*border-right: 10px solid purple;*/
+/*}*/
+
+/*.card:last-of-type{*/
+    /*border-right: 10px solid blue;*/
+/*}*/
 
 .card p{
     max-width: 200px;
