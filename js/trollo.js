@@ -157,7 +157,8 @@ $("#connectLink")
     .click(function(){
         Trello.authorize({
             type: "popup",
-            success: onAuthorize
+            success: onAuthorize,
+            name: "Trollo"
         })
     });
 
