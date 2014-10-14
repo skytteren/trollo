@@ -10,6 +10,7 @@ var onAuthorize = function() {
         name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
         var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
             results = regex.exec(location.search);
+	results = results || regex.exec(location.hash);
         return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
 
